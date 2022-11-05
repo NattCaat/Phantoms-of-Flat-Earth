@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/FlatEarth.vox-b5d0e9f8c14127dab31be7f4c52a70a9.mesh"
+
+[deps]
+
+source_file="res://Models/FlatEarth.vox"
+dest_files=[ "res://.import/FlatEarth.vox-b5d0e9f8c14127dab31be7f4c52a70a9.mesh" ]
+
+[params]
+
