@@ -9,6 +9,7 @@ var velocity := Vector3.ZERO
 var snapVector := Vector3.DOWN
 
 func _ready():
+	pass
 	OS.window_fullscreen = true
 
 
