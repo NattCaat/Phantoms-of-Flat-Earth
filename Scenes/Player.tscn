@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Models/test.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/SpringArm.gd" type="Script" id=3]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 1, 1.35843, 0.168144 )
+
+[node name="Player" type="KinematicBody"]
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.789223, 0, 0, 0, 1, 0, 1.41782, 0 )
+shape = SubResource( 1 )
+
+[node name="playerModel" type="MeshInstance" parent="."]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 1.91459, -1.8311 )
+mesh = ExtResource( 1 )
+
+[node name="SpringArm" type="SpringArm" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.28583, 0 )
+script = ExtResource( 3 )
+
+[node name="Cam" type="Camera" parent="SpringArm"]
