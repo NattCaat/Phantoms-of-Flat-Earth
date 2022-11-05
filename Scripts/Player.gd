@@ -8,6 +8,7 @@ export var gravity := 50.0
 var velocity := Vector3.ZERO
 var snapVector := Vector3.DOWN
 
+
 func _ready():
 	pass
 	#OS.window_fullscreen = true
@@ -15,7 +16,10 @@ func _ready():
 
 func _physics_process(delta):
 	moveInput(delta)
-	$playerModel.rotation.y = $SpringArm.rotation.y
+	$playerModel.rotation_degrees.y = $SpringArm.rotation_degrees.y - 180
+	$CollisionShape.rotation.y = $SpringArm.rotation.y
+	if Input.is_action_just_pressed("m1"):
+		$"..".add_child(load("res://Scenes/FlatEarth.tscn").instance())
 
 
 func moveInput(delta):

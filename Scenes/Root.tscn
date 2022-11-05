@@ -15,7 +15,9 @@ extents = Vector3( 6, 0.001, 6 )
 [node name="Spatial" type="Spatial"]
 
 [node name="RigidBody2" type="RigidBody" parent="."]
-transform = Transform( 0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, -1.7232, 0.600911, -3.93612 )
+transform = Transform( 0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, 0.230878, 5.46662, -3.93612 )
+collision_layer = 2049
+collision_mask = 2049
 
 [node name="Desk" type="MeshInstance" parent="RigidBody2"]
 mesh = ExtResource( 2 )
@@ -26,6 +28,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.45543, -2.95914, 3.5107 )
 shape = SubResource( 3 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
+unique_name_in_owner = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.616797 )
 jumpHight = 8.0
 gravity = 30.0
 

@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/Player.vox-5847b7bd9496c8b7111b898fd7f287d2.mesh"
+
+[deps]
+
+source_file="res://Models/Player.vox"
+dest_files=[ "res://.import/Player.vox-5847b7bd9496c8b7111b898fd7f287d2.mesh" ]
+
+[params]
+
