@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/Sheople.vox-bb9332b958b0e8b1a05001bb2af49970.mesh"
+
+[deps]
+
+source_file="res://Models/Sheople.vox"
+dest_files=[ "res://.import/Sheople.vox-bb9332b958b0e8b1a05001bb2af49970.mesh" ]
+
+[params]
+
