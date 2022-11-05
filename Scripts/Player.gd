@@ -10,7 +10,7 @@ var snapVector := Vector3.DOWN
 
 func _ready():
 	pass
-	OS.window_fullscreen = true
+	#OS.window_fullscreen = true
 
 
 func _physics_process(delta):

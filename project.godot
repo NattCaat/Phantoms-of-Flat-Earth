@@ -24,6 +24,11 @@ config/name="PhantomsOfFlatEarth"
 run/main_scene="res://Scenes/Root.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=1600
+window/size/height=900
+
 [editor]
 
 version_control_autoload_on_startup=true

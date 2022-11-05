@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Desk.obj-8e3f89fb4c3ace8d2241f130fb7d3f01.mesh"
+
+[deps]
+
+files=[ "res://.import/Desk.obj-8e3f89fb4c3ace8d2241f130fb7d3f01.mesh" ]
+
+source_file="res://Models/Desk.obj"
+dest_files=[ "res://.import/Desk.obj-8e3f89fb4c3ace8d2241f130fb7d3f01.mesh", "res://.import/Desk.obj-8e3f89fb4c3ace8d2241f130fb7d3f01.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

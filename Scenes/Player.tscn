@@ -5,14 +5,14 @@
 [ext_resource path="res://Scripts/SpringArm.gd" type="Script" id=3]
 
 [sub_resource type="BoxShape" id=1]
-extents = Vector3( 1, 1.35843, 0.168144 )
+extents = Vector3( 1, 1.4, 0.168 )
 
 [node name="Player" type="KinematicBody"]
 script = ExtResource( 2 )
 speed = 5.0
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.789223, 0, 0, 0, 1, 0, 1.41782, 0 )
+transform = Transform( 1, 0, 0, 0, 0.789223, 0, 0, 0, 1, 0, 1.1, 0 )
 shape = SubResource( 1 )
 
 [node name="playerModel" type="MeshInstance" parent="."]
@@ -21,6 +21,7 @@ mesh = ExtResource( 1 )
 
 [node name="SpringArm" type="SpringArm" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.038, 0 )
+spring_length = 0.0
 script = ExtResource( 3 )
 
 [node name="Cam" type="Camera" parent="SpringArm"]
