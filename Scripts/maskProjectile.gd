@@ -13,5 +13,7 @@ func _ready():
 	set_as_toplevel(true)
 
 func _physics_process(delta):
-#	translate(-Vector3.FORWARD * 0.2)
-	pass
+	if $Timer.is_stopped(): destroy()
+		
+func destroy():
+	queue_free()
