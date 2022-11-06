@@ -8,17 +8,18 @@
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 unique_name_in_owner = true
+transform = Transform( 0.999824, 0, -0.0187788, 0, 1, 0, 0.0187788, 0, 0.999824, -47.0357, -0.691991, -11.7987 )
 speed = 10.0
 jumpHight = 8.0
 gravity = 30.0
 
 [node name="Sheople" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3014, -1.27532, -0.784914 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -45.1259, -1.27532, -55.3029 )
 
 [node name="Sheople2" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.64879, -1.27095, 3.99062 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46.7786, -1.27095, -50.5274 )
 
 [node name="Sheople3" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.24797, -1.25862, 5.88948 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -58.6753, -1.25862, -48.6285 )
 
 [node name="World" parent="." instance=ExtResource( 2 )]

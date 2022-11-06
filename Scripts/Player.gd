@@ -55,7 +55,3 @@ func moveInput(delta):
 	velocity = move_and_slide_with_snap(velocity, snapVector, Vector3.UP, true)
 	return velocity
 
-
-
-func _on_Sheople_iAmNew(test):
-	connect("playerPos", test, "_on_Player_playerPos")
