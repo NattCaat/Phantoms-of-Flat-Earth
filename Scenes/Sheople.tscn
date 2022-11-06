@@ -13,6 +13,8 @@ extents = Vector3( 1, 1.13394, 1.63927 )
 extents = Vector3( 0.266982, 0.401927, 0.415946 )
 
 [node name="Sheople" type="KinematicBody"]
+collision_layer = 2049
+collision_mask = 2049
 script = ExtResource( 4 )
 
 [node name="Mask" type="MeshInstance" parent="."]
