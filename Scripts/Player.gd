@@ -10,6 +10,7 @@ var snapVector := Vector3.DOWN
 
 signal playerPos(pos)
 
+
 func _ready():
 	pass
 	#OS.window_fullscreen = true
@@ -23,6 +24,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("m1"):
 		$"..".add_child(load("res://Scenes/FlatEarth.tscn").instance())
 	emit_signal("playerPos", translation)
+
 
 
 func moveInput(delta):

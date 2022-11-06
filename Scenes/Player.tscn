@@ -7,10 +7,12 @@
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.851686, 1.85, 0.262747 )
 
+
 [sub_resource type="Environment" id=2]
 background_mode = 1
 background_energy = 0.0
 ambient_light_energy = 0.0
+
 
 [node name="Player" type="KinematicBody"]
 script = ExtResource( 2 )
