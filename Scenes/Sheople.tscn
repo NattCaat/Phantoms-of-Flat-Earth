@@ -29,7 +29,7 @@ mesh = ExtResource( 1 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14281, 0 )
 shape = SubResource( 1 )
 
-[node name="KinematicBody" type="KinematicBody" parent="."]
+[node name="KinematicBody" type="KinematicBody" parent="." groups=["sheep"]]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.49672, -0.264634 )
 script = ExtResource( 3 )
 

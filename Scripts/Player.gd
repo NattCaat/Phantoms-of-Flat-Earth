@@ -10,6 +10,7 @@ var snapVector := Vector3.DOWN
 
 signal playerPos(pos)
 
+var maskd := false
 
 func _ready():
 	pass
@@ -18,14 +19,22 @@ func _ready():
 
 func _physics_process(delta):
 	moveInput(delta)
-	$playerModel.rotation_degrees.y = $SpringArm.rotation_degrees.y - 180
-	$CollisionShape.rotation.y = $SpringArm.rotation.y
-	$SpotLight.rotation_degrees = $SpringArm.rotation_degrees
 	if Input.is_action_just_pressed("m1"):
 		$"..".add_child(load("res://Scenes/FlatEarth.tscn").instance())
 	emit_signal("playerPos", translation)
 
-
+func _process(delta):
+	$CollisionShape.rotation.y = $SpringArm.rotation.y
+	$playerModel.rotation_degrees.y = $SpringArm.rotation_degrees.y - 180
+	$MaskPlayer.rotation_degrees.y = $SpringArm.rotation_degrees.y - 180
+	$SpotLight.rotation_degrees = $SpringArm.rotation_degrees
+	
+	if maskd:
+		$playerModel.visible = false
+		$MaskPlayer.visible = true
+	else:
+		$playerModel.visible = true
+		$MaskPlayer.visible = false
 
 func moveInput(delta):
 	var MoveDirection := Vector3.ZERO
