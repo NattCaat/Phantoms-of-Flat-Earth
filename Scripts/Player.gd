@@ -8,6 +8,7 @@ export var gravity := 50.0
 var velocity := Vector3.ZERO
 var snapVector := Vector3.DOWN
 
+signal playerPos(pos)
 
 func _ready():
 	pass
@@ -18,8 +19,10 @@ func _physics_process(delta):
 	moveInput(delta)
 	$playerModel.rotation_degrees.y = $SpringArm.rotation_degrees.y - 180
 	$CollisionShape.rotation.y = $SpringArm.rotation.y
+	$SpotLight.rotation_degrees = $SpringArm.rotation_degrees
 	if Input.is_action_just_pressed("m1"):
 		$"..".add_child(load("res://Scenes/FlatEarth.tscn").instance())
+	emit_signal("playerPos", translation)
 
 
 func moveInput(delta):
@@ -41,3 +44,7 @@ func moveInput(delta):
 	velocity = move_and_slide_with_snap(velocity, snapVector, Vector3.UP, true)
 	return velocity
 
+
+
+func _on_Sheople_iAmNew(test):
+	connect("playerPos", test, "_on_Player_playerPos")

@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Models/Sheople.vox" type="ArrayMesh" id=1]
+[ext_resource path="res://Models/Gun.vox" type="ArrayMesh" id=2]
+[ext_resource path="res://Scripts/SheopleGun.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Sheople.gd" type="Script" id=4]
+[ext_resource path="res://Models/Mask.vox" type="ArrayMesh" id=5]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 1, 1.13394, 1.63927 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.266982, 0.401927, 0.415946 )
+
+[node name="Sheople" type="KinematicBody"]
+script = ExtResource( 4 )
+
+[node name="Mask" type="MeshInstance" parent="."]
+transform = Transform( -0.06, 0, -9.05975e-09, 0, 0.06, 0, 9.05975e-09, 0, -0.06, 0, 1.33519, 1.48507 )
+mesh = ExtResource( 5 )
+
+[node name="Sheople" type="MeshInstance" parent="."]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )
+mesh = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14281, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody" type="KinematicBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.49672, -0.264634 )
+script = ExtResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="KinematicBody"]
+shape = SubResource( 2 )
+
+[node name="Gun" type="MeshInstance" parent="KinematicBody/CollisionShape"]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.49886, -0.024114 )
+mesh = ExtResource( 2 )
+
+[node name="SpotLight" type="SpotLight" parent="KinematicBody/CollisionShape"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.125564, -2.98023e-08 )
+light_color = Color( 0.815686, 0.105882, 0.105882, 1 )
+light_energy = 11.162
+spot_range = 52.978
+spot_angle = 0.1
+
+[node name="RayCast" type="RayCast" parent="KinematicBody/CollisionShape"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.132201, 0.195552 )
+enabled = true
+cast_to = Vector3( 0, 0, 15 )
+
+[node name="Timer" type="Timer" parent="KinematicBody"]
+one_shot = true
+autostart = true
