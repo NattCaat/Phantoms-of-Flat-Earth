@@ -14,3 +14,10 @@ func _physics_process(delta):
 	$FlatEarth.rotation_degrees.y += 10
 	if $Timer.is_stopped():
 		queue_free()
+	
+	for body in get_colliding_bodies():
+		print(body)
+		if body.is_in_group("sheep"):
+			body.lives -= 1
+			print(body.lives)
+			queue_free()
