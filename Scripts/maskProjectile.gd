@@ -12,8 +12,14 @@ func _ready():
 	$CollisionShape.rotation_degrees.z = 0
 	set_as_toplevel(true)
 
-func _physics_process(delta):
+func _process(delta):
 	if $Timer.is_stopped(): destroy()
+	
+	for body in get_colliding_bodies():
+		if body.is_in_group("player"):
+			body.maskd = true
+		if !body.is_in_group("sheep"):
+			destroy()
 		
 func destroy():
 	queue_free()

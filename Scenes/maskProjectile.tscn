@@ -11,6 +11,9 @@ extents = Vector3( 0.253259, 0.135459, 0.153511 )
 [node name="maskProjectile" type="RigidBody"]
 mass = 0.00102041
 gravity_scale = 0.0
+continuous_cd = true
+contacts_reported = 1
+contact_monitor = true
 axis_lock_angular_x = true
 axis_lock_angular_y = true
 axis_lock_angular_z = true

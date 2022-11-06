@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/MaskPlayer.vox-5ada549d9d396c3a883ad17088c7f638.mesh"
+
+[deps]
+
+source_file="res://Models/MaskPlayer.vox"
+dest_files=[ "res://.import/MaskPlayer.vox-5ada549d9d396c3a883ad17088c7f638.mesh" ]
+
+[params]
+
