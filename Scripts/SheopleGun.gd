@@ -9,5 +9,5 @@ func _physics_process(delta):
 	rotation_degrees = Vector3(0, rotation_degrees.y - 180,0)
 	if $CollisionShape/RayCast.is_colliding():
 		if $Timer.is_stopped():
-			add_child(load("res://Scenes/Globus.tscn").instance())
+			add_child(load("res://Scenes/maskProjectile.tscn").instance())
 			$Timer.start()
