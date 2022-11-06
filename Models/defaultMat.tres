@@ -1,0 +1,10 @@
+[gd_resource type="SpatialMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://Models/scolor-fi-1x.png" type="Texture" id=1]
+
+[resource]
+resource_name = "defaultMat"
+params_cull_mode = 2
+albedo_texture = ExtResource( 1 )
+metallic = 0.26
+roughness = 0.44
