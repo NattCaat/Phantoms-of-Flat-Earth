@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/pigeoncam.obj-b11a5fed58f9d7225fa4fdfe8151d24e.mesh"
+
+[deps]
+
+files=[ "res://.import/pigeoncam.obj-b11a5fed58f9d7225fa4fdfe8151d24e.mesh" ]
+
+source_file="res://Models/pigeoncam.obj"
+dest_files=[ "res://.import/pigeoncam.obj-b11a5fed58f9d7225fa4fdfe8151d24e.mesh", "res://.import/pigeoncam.obj-b11a5fed58f9d7225fa4fdfe8151d24e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286
