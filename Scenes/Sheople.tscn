@@ -17,27 +17,35 @@ collision_layer = 2049
 collision_mask = 2049
 script = ExtResource( 4 )
 
-[node name="Mask" type="MeshInstance" parent="."]
-transform = Transform( -0.06, 0, -9.05975e-09, 0, 0.06, 0, 9.05975e-09, 0, -0.06, 0, 1.33519, 1.48507 )
-mesh = ExtResource( 5 )
-
-[node name="Sheople" type="MeshInstance" parent="."]
-transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )
-mesh = ExtResource( 1 )
-
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14281, 0 )
 shape = SubResource( 1 )
 
+[node name="Sheople" type="MeshInstance" parent="CollisionShape"]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -1.14281, 0 )
+mesh = ExtResource( 1 )
+skeleton = NodePath("../..")
+
+[node name="Mask" type="MeshInstance" parent="CollisionShape/Sheople"]
+transform = Transform( -0.6, 0, -9.05975e-08, 0, 0.6, 0, 9.05975e-08, 0, -0.6, 0, 13.3519, 14.8507 )
+mesh = ExtResource( 5 )
+skeleton = NodePath("../../..")
+
+[node name="Navi" type="NavigationAgent" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
 [node name="KinematicBody" type="KinematicBody" parent="." groups=["sheep"]]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.49672, -0.264634 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.49672, -0.539301 )
 script = ExtResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="KinematicBody"]
 shape = SubResource( 2 )
 
 [node name="Gun" type="MeshInstance" parent="KinematicBody/CollisionShape"]
-transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.49886, -0.024114 )
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.49886, 0.257185 )
 mesh = ExtResource( 2 )
 
 [node name="SpotLight" type="SpotLight" parent="KinematicBody/CollisionShape"]
@@ -50,7 +58,7 @@ spot_angle = 0.1
 [node name="RayCast" type="RayCast" parent="KinematicBody/CollisionShape"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.132201, 0.195552 )
 enabled = true
-cast_to = Vector3( 0, 0, 15 )
+cast_to = Vector3( 0, 0, 30 )
 
 [node name="Timer" type="Timer" parent="KinematicBody"]
 one_shot = true
