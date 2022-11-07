@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/Bush.vox-fe9218f5a26b8d33a2b6329b4ee4031f.mesh"
+
+[deps]
+
+source_file="res://Models/Bush.vox"
+dest_files=[ "res://.import/Bush.vox-fe9218f5a26b8d33a2b6329b4ee4031f.mesh" ]
+
+[params]
+

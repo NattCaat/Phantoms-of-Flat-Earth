@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/Lantern.vox-5af300528859097b05fbbfa9784afdca.mesh"
+
+[deps]
+
+source_file="res://Models/Lantern.vox"
+dest_files=[ "res://.import/Lantern.vox-5af300528859097b05fbbfa9784afdca.mesh" ]
+
+[params]
+

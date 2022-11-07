@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/trashcan.vox-73368c07f9fc3140ec23f4a7c5548619.mesh"
+
+[deps]
+
+source_file="res://Models/trashcan.vox"
+dest_files=[ "res://.import/trashcan.vox-73368c07f9fc3140ec23f4a7c5548619.mesh" ]
+
+[params]
+
