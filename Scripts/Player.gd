@@ -19,8 +19,9 @@ func _ready():
 
 func _physics_process(delta):
 	moveInput(delta)
-	if Input.is_action_just_pressed("m1"):
+	if Input.is_action_just_pressed("m1") && $AttackDelay.is_stopped():
 		$"..".add_child(load("res://Scenes/FlatEarth.tscn").instance())
+		$AttackDelay.start()
 	emit_signal("playerPos", translation)
 
 func _process(delta):

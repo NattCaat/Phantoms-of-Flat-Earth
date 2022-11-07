@@ -15,7 +15,7 @@ ambient_light_energy = 0.0
 
 [node name="Player" type="KinematicBody" groups=["player"]]
 script = ExtResource( 2 )
-speed = 5.0
+speed = 10.0
 
 [node name="OmniLight" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.21411, 0 )
@@ -50,15 +50,18 @@ environment = SubResource( 2 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Label" type="Label" parent="CanvasLayer"]
+[node name="Fadenkreuz" type="Label" parent="CanvasLayer"]
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 0.533
 anchor_right = 0.5
-anchor_bottom = 0.5
+anchor_bottom = 0.6
 margin_left = -20.0
 margin_top = -15.5
 margin_right = 20.0
 margin_bottom = 15.5
-text = "
-+"
+text = "+"
 align = 1
+
+[node name="AttackDelay" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
