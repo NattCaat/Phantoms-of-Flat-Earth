@@ -11,17 +11,21 @@ var snapVector := Vector3.DOWN
 signal playerPos(pos)
 
 var maskd := false
+var ammo := 10
+var lockingAt
 
 func _ready():
-	pass
-	#OS.window_fullscreen = true
+	$CanvasLayer/Ammo.text = String(ammo)
 
 
 func _physics_process(delta):
 	moveInput(delta)
-	if Input.is_action_just_pressed("m1") && $AttackDelay.is_stopped():
-		$"..".add_child(load("res://Scenes/FlatEarth.tscn").instance())
-		$AttackDelay.start()
+	shoot()
+	if $RayCast.is_colliding():
+		lockingAt = $RayCast.get_collider()
+		if lockingAt.is_in_group("sheep") && Input.is_action_just_pressed("m2"):
+			lockingAt.lives -= 3
+	
 	emit_signal("playerPos", translation)
 
 func _process(delta):
@@ -29,6 +33,9 @@ func _process(delta):
 	$playerModel.rotation_degrees.y = $SpringArm.rotation_degrees.y - 180
 	$MaskPlayer.rotation_degrees.y = $SpringArm.rotation_degrees.y - 180
 	$SpotLight.rotation_degrees = $SpringArm.rotation_degrees
+	$RayCast.rotation_degrees = $SpringArm.rotation_degrees
+	
+	$CanvasLayer/Ammo.text = String(ammo)
 	
 	if maskd:
 		$playerModel.visible = false
@@ -56,3 +63,9 @@ func moveInput(delta):
 	velocity = move_and_slide_with_snap(velocity, snapVector, Vector3.UP, true)
 	return velocity
 
+func shoot():
+	if Input.is_action_just_pressed("m1") && $AttackDelay.is_stopped() && ammo > 0:
+		$"..".add_child(load("res://Scenes/FlatEarth.tscn").instance())
+		$AttackDelay.start()
+		ammo -= 1
+		$CanvasLayer/Ammo.text = String(ammo)

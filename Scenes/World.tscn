@@ -167,3 +167,12 @@ skeleton = NodePath("../..")
 
 [node name="Sheople" parent="Navigation/NavigationMeshInstance" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -35.9337, -0.23024, -35.0448 )
+
+[node name="Sheople2" parent="Navigation/NavigationMeshInstance" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -45.126, -0.23, -35.83 )
+
+[node name="Sheople3" parent="Navigation/NavigationMeshInstance" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -49.12, -0.23, -36.387 )
+
+[node name="Sheople4" parent="Navigation/NavigationMeshInstance" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -58.675, -0.23, -35.972 )

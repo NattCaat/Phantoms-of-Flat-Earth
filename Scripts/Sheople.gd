@@ -33,6 +33,7 @@ func _physics_process(delta: float) -> void:
 
 func _process(delta):
 	if lives <= 0:
+		player.ammo += 5
 		queue_free()
 
 

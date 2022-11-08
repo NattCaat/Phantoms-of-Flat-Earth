@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/World.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/Root.gd" type="Script" id=3]
-[ext_resource path="res://Scenes/Sheople.tscn" type="PackedScene" id=4]
 
 [node name="Spatial" type="Spatial"]
 script = ExtResource( 3 )
@@ -13,14 +12,5 @@ unique_name_in_owner = true
 transform = Transform( 0.999824, 0, -0.0187788, 0, 1, 0, 0.0187788, 0, 0.999824, -47.0357, -0.691991, -11.7987 )
 jumpHight = 8.0
 gravity = 30.0
-
-[node name="Sheople" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -45.1259, -1.27532, -55.3029 )
-
-[node name="Sheople2" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46.7786, -1.27095, -50.5274 )
-
-[node name="Sheople3" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -58.6753, -1.25862, -48.6285 )
 
 [node name="World" parent="." instance=ExtResource( 2 )]
