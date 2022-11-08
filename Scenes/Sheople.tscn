@@ -38,7 +38,7 @@ wait_time = 0.3
 autostart = true
 
 [node name="KinematicBody" type="KinematicBody" parent="." groups=["sheep"]]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.49672, -0.539301 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.497, 0 )
 script = ExtResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="KinematicBody"]
@@ -49,9 +49,10 @@ transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.49886, 0.257185 )
 mesh = ExtResource( 2 )
 
 [node name="SpotLight" type="SpotLight" parent="KinematicBody/CollisionShape"]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.125564, -2.98023e-08 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.125564, 0.254315 )
 light_color = Color( 0.815686, 0.105882, 0.105882, 1 )
 light_energy = 11.162
+shadow_enabled = true
 spot_range = 52.978
 spot_angle = 0.1
 
