@@ -33,7 +33,10 @@ func _physics_process(delta: float) -> void:
 
 func _process(delta):
 	if lives <= 0:
-		player.ammo += 5
+		player.getAmmo(5)
+		add_child(load("res://Scenes/Money.tscn").instance())
+		remove_child($Money)
+		print("muss noch gefixt werden")
 		queue_free()
 
 

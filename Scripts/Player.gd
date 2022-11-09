@@ -35,8 +35,6 @@ func _process(delta):
 	$SpotLight.rotation_degrees = $SpringArm.rotation_degrees
 	$RayCast.rotation_degrees = $SpringArm.rotation_degrees
 	
-	$CanvasLayer/Ammo.text = String(ammo)
-	
 	if maskd:
 		$playerModel.visible = false
 		$MaskPlayer.visible = true
@@ -69,3 +67,7 @@ func shoot():
 		$AttackDelay.start()
 		ammo -= 1
 		$CanvasLayer/Ammo.text = String(ammo)
+
+func getAmmo(amount):
+	ammo += amount
+	$CanvasLayer/Ammo.text = String(ammo)

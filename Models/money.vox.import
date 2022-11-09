@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/money.vox-99f51905c777c772b1a3d00363052749.mesh"
+
+[deps]
+
+source_file="res://Models/money.vox"
+dest_files=[ "res://.import/money.vox-99f51905c777c772b1a3d00363052749.mesh" ]
+
+[params]
+
